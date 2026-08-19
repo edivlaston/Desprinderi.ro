@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptul de(s)prinderi.ro — Desprindere și Deprindere</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+    <div class="container nav-wrapper">
+        <a href="index.html" class="logo-brand">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M50 5C30 5 15 25 15 45C15 65 30 75 50 75C70 75 85 55 85 35C85 15 70 5 50 5Z" fill="#5B6647" opacity="0.2"/>
+    <path d="M50 10C35 10 25 22 25 38C25 54 38 62 50 78C62 94 75 86 75 70C75 54 65 46 50 30C40 20 65 10 50 10Z" stroke="#3F4832" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="50" cy="38" r="6" fill="#C5A059"/>
+</svg>
+            <span class="logo-text">de<span class="logo-s">s</span>prinderi.ro</span>
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="">Acasă</a></li>
+                <li><a href="concept.html" class="active">Concept</a></li>
+                <li><a href="programe.html" class="">Programe</a></li>
+                <li><a href="articole.html" class="">Articole</a></li>
+                <li><a href="despre.html" class="">Despre Noi</a></li>
+                <li><a href="contact.html" class="">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <section class="hero-page" style="padding: 70px 0;">
+        <div class="container hero-content">
+            <h1>Filozofia Noastră de Deprinderi</h1>
+            <p>Tranziția armonioasă de la vechile tipare la o viață echilibrată și conștientă.</p>
+        </div>
+    </section>
+
+    <section class="section-padding container">
+        <div class="grid-2" style="align-items: center;">
+            <div class="card" style="border-left: 6px solid var(--brown-med);">
+                <h2 style="color: var(--brown-dark); margin-bottom: 15px;">1. Desprinderea</h2>
+                <p>Reprezintă actul conștient și ghidat de eliberare de sub influența mecanismelor rigide de adaptare, a tiparelor de gândire limitative și a obișnuințelor care împovărează viața de zi cu zi.</p>
+            </div>
+            <div class="card" style="border-left: 6px solid var(--olive-med);">
+                <h2 style="color: var(--olive-dark); margin-bottom: 15px;">2. Deprinderea</h2>
+                <p>Constă în procesul de învățare și exersare a noilor comportamente sănătoase: gestionarea eficientă a stresului, autoreglarea emoțională și consolidarea relațiilor interumane autentice.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+    <div class="container text-center">
+        <h3>de(s)prinderi.ro — Centru de Psihoterapie & Dezvoltare Personala</h3>
+        <p style="max-width: 600px; margin: 0 auto 25px auto; color: rgba(250, 246, 240, 0.8);">
+            Un spațiu sigur și confidențial pentru reconectarea cu tine însuți și construirea unui stil de viață echilibrat.
+        </p>
+        <div style="margin-bottom: 30px;">
+            <a href="contact.html" class="btn btn-primary">Cere o Consultație Confidențială</a>
+        </div>
+        <div class="footer-bottom">
+            <div>© 2026 de(s)prinderi.ro. Toate drepturile rezervate.</div>
+            <div>Confidențialitate 100% Garantată | Psihoterapie Ambulatorie</div>
+        </div>
+    </div>
+</footer>
+<script>
+document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', () => {
+        const parent = item.parentElement;
+        parent.classList.toggle('active');
+    });
+});
+</script>
+</body>
+</html>
