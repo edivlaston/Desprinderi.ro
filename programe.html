@@ -1,92 +1,224 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QEXH2SYB3G"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QEXH2SYB3G"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-QEXH2SYB3G");
+</script>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Programele de recuperare de(s)prinderi — outpatient intensiv, menținere, codependență, adicții comportamentale, aftercare. București, Primăverii.">
+<title>Programe de recuperare — de(s)prinderi</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.prog-grid{display:grid;grid-template-columns:1fr;gap:2px;margin-top:52px}
+.prog-card{display:grid;grid-template-columns:1fr 2fr auto;gap:0;background:rgba(253,251,247,0.6);border:1px solid var(--rule);overflow:hidden;transition:border-color .3s}
+.prog-card:hover{border-color:var(--sage)}
+.prog-num{background:var(--sage);padding:36px 28px;display:flex;flex-direction:column;justify-content:space-between;min-width:140px}
+.prog-num .n{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:var(--bg3);line-height:1}
+.prog-num .dur{font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:rgba(250,247,242,0.6);margin-top:8px}
+.prog-body{padding:36px 40px;border-right:1px solid var(--rule)}
+.prog-badge{display:inline-block;font-size:10.5px;text-transform:uppercase;letter-spacing:0.12em;color:var(--sage);font-weight:500;border:1px solid var(--sage);padding:4px 10px;margin-bottom:16px}
+.prog-body h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:500;color:var(--ink);margin-bottom:12px;line-height:1.1}
+.prog-body p{font-size:14.5px;color:var(--mut);line-height:1.75;margin-bottom:18px}
+.prog-includes{list-style:none;display:flex;flex-direction:column;gap:7px}
+.prog-includes li{font-size:13.5px;color:var(--mut);display:flex;align-items:flex-start;gap:8px;line-height:1.5}
+.prog-includes li::before{content:'◦';color:var(--sage);flex-shrink:0;margin-top:1px}
+.prog-pricing{padding:36px 32px;display:flex;flex-direction:column;justify-content:center;align-items:flex-end;text-align:right;min-width:180px}
+.prog-price{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;color:var(--ink);line-height:1}
+.prog-price-sub{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;margin-bottom:20px}
+.prog-card.featured{border-color:var(--sage);position:relative}
+.prog-card.featured .prog-num{background:var(--sage2)}
+.prog-card.featured::before{content:'Recomandat';position:absolute;top:0;left:140px;background:var(--sage2);color:var(--bg3);font-size:10.5px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:6px 14px}
 
-      gtag('config', 'G-QEXH2SYB3G');
-    </script>
+.compare-table{margin-top:56px;overflow-x:auto}
+.compare-table table{width:100%;border-collapse:collapse}
+.compare-table th{background:var(--ink2);color:var(--bg3);padding:16px 20px;font-size:12px;text-transform:uppercase;letter-spacing:0.1em;font-weight:500;text-align:left;font-family:'Inter'}
+.compare-table td{padding:14px 20px;border-bottom:1px solid var(--rule);font-size:14px;color:var(--mut)}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table tr:hover td{background:var(--bg2)}
+.compare-table td:first-child{color:var(--ink);font-weight:500}
+.check{color:var(--sage);font-size:16px}
+.dash{color:var(--rule)}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programe Terapeutice — de(s)prinderi.ro</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+@media(max-width:900px){
+  .prog-card{grid-template-columns:1fr}.prog-num{min-width:unset;flex-direction:row;align-items:center;gap:16px}
+  .prog-pricing{align-items:flex-start;text-align:left;border-top:1px solid var(--rule)}
+}
+</style>
 </head>
 <body>
-    <header class="header">
-    <div class="container nav-wrapper">
-        <a href="index.html" class="logo-brand">
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M50 5C30 5 15 25 15 45C15 65 30 75 50 75C70 75 85 55 85 35C85 15 70 5 50 5Z" fill="#5B6647" opacity="0.2"/>
-    <path d="M50 10C35 10 25 22 25 38C25 54 38 62 50 78C62 94 75 86 75 70C75 54 65 46 50 30C40 20 65 10 50 10Z" stroke="#3F4832" stroke-width="6" stroke-linecap="round"/>
-    <circle cx="50" cy="38" r="6" fill="#C5A059"/>
-</svg>
-            <span class="logo-text">de<span class="logo-s">s</span>prinderi.ro</span>
-        </a>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html" class="">Acasă</a></li>
-                <li><a href="concept.html" class="">Concept</a></li>
-                <li><a href="programe.html" class="active">Programe</a></li>
-                <li><a href="articole.html" class="">Articole</a></li>
-                <li><a href="despre.html" class="">Despre Noi</a></li>
-                <li><a href="contact.html" class="">Contact</a></li>
-            </ul>
-        </nav>
+<nav>
+  <div class="nav-in">
+    <a href="index.html" class="logo">de<span class="p">(</span><span class="s">s</span><span class="p">)</span>prinderi</a>
+    <div class="nav-links">
+      <a href="programe.html" class="active">Programe</a>
+      <a href="grup-suport.html">Grup de suport</a>
+      <a href="faq.html">Întrebări</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html#programare" class="nav-cta">Programează</a>
     </div>
-</header>
+    <button class="burger" aria-label="Meniu" onclick="toggleMenu(this)"><span></span><span></span><span></span></button>
+  </div>
+</nav>
 
-    <section class="hero-page" style="padding: 70px 0;">
-        <div class="container hero-content">
-            <h1>Programe și Servicii de Psihoterapie</h1>
-            <p>Servicii ambulatorii croite pe măsura nevoilor tale individuale.</p>
-        </div>
-    </section>
+<div class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow rev">Recuperare structurată</div>
+    <h1 class="rev">Programe de<br><em>recuperare</em></h1>
+    <p class="rev">Nu există un drum unic spre ieșirea din adicție. De aceea avem cinci programe distincte — fiecare construit în jurul unui moment diferit din procesul de schimbare.</p>
+  </div>
+</div>
 
-    <section class="section-padding container">
-        <div class="grid-3">
-            <div class="card">
-                <h3 style="color: var(--olive-dark); margin-bottom: 15px;">Psihoterapie Individuală</h3>
-                <p style="color: var(--text-muted);">Ședințe unu-la-unu orientate pe identificarea factorilor declanșatori, gestionarea stărilor emoționale dificile și construirea de deprinderi sănătoase.</p>
-            </div>
-            <div class="card">
-                <h3 style="color: var(--olive-dark); margin-bottom: 15px;">Grupuri de Suport & Deprinderi</h3>
-                <p style="color: var(--text-muted);">Terapie de grup într-un cadru restrâns și confidențial pentru împărtășirea experiențelor și exersarea abilităților de comunicare și reziliență.</p>
-            </div>
-            <div class="card">
-                <h3 style="color: var(--olive-dark); margin-bottom: 15px;">Consiliere pentru Familie</h3>
-                <p style="color: var(--text-muted);">Ghidaj specializat pentru parteneri și familie în vederea restabilirii echilibrului și suportului reciproc în mediul casnic.</p>
-            </div>
-        </div>
-    </section>
+<section class="section" style="background:rgba(253,251,247,0.55)">
+  <div class="wrap">
+    <div class="eyebrow rev">Cele 5 programe</div>
+    <h2 class="sec-title rev">Alege programul potrivit<br>pentru unde ești acum</h2>
+    <div class="prog-grid">
 
-    <footer class="footer">
-    <div class="container text-center">
-        <h3>de(s)prinderi.ro — Centru de Psihoterapie & Dezvoltare Personala</h3>
-        <p style="max-width: 600px; margin: 0 auto 25px auto; color: rgba(250, 246, 240, 0.8);">
-            Un spațiu sigur și confidențial pentru reconectarea cu tine însuți și construirea unui stil de viață echilibrat.
-        </p>
-        <div style="margin-bottom: 30px;">
-            <a href="contact.html" class="btn btn-primary">Cere o Consultație Confidențială</a>
+      <!-- 1 -->
+      <div class="prog-card rev">
+        <div class="prog-num"><div class="n">01</div><div class="dur">8–12 săptămâni</div></div>
+        <div class="prog-body">
+          <div class="prog-badge">Substanțe & Comportamental</div>
+          <h3>Program Outpatient Intensiv</h3>
+          <p>Programul central al clinicii. Destinat persoanelor cu adicție activă care funcționează — merg la muncă, au relații — dar simt că au pierdut controlul. Nu vrei internare. Vrei ajutor discret, eficient, la un specialist serios.</p>
+          <ul class="prog-includes">
+            <li>Evaluare psihologică completă + plan terapeutic personalizat</li>
+            <li>Ședințe săptămânale de psihoterapie + interviu motivațional</li>
+            <li>Consultație psihiatrică la nevoie (inclus)</li>
+            <li>Nutriție clinică la nevoie (inclus)</li>
+            <li>Acces la grupul de suport vineri 17:00</li>
+          </ul>
         </div>
-        <div class="footer-bottom">
-            <div>© 2026 de(s)prinderi.ro. Toate drepturile rezervate.</div>
-            <div>Confidențialitate 100% Garantată | Psihoterapie Ambulatorie</div>
+        <div class="prog-pricing"><div class="prog-price">4.500 lei</div><div class="prog-price-sub">Program complet</div><a href="contact.html#programare" class="btn btn-sage">Înscrie-te</a></div>
+      </div>
+
+      <!-- 2 -->
+      <div class="prog-card featured rev">
+        <div class="prog-num"><div class="n">02</div><div class="dur">6–12 luni</div></div>
+        <div class="prog-body">
+          <div class="prog-badge">Recuperare & Menținere</div>
+          <h3>Program de Menținere</h3>
+          <p>Cel mai important lucru după ce ai ieșit dintr-o perioadă intensivă este să nu recazi. Recidiva nu e un eșec — e o etapă predictibilă fără continuitate. Acest program te însoțește în cei mai vulnerabili ani ai recuperării.</p>
+          <ul class="prog-includes">
+            <li>Ședință individuală lunară de consolidare</li>
+            <li>Acces nelimitat la grupul de suport săptămânal</li>
+            <li>Sesiune de urgență la cerere (în termen de 48h)</li>
+            <li>Raport lunar de progres personal</li>
+            <li>Disponibil și online</li>
+          </ul>
         </div>
+        <div class="prog-pricing"><div class="prog-price">800 lei</div><div class="prog-price-sub">Per lună</div><a href="contact.html#programare" class="btn btn-sage">Înscrie-te</a></div>
+      </div>
+
+      <!-- 3 -->
+      <div class="prog-card rev">
+        <div class="prog-num"><div class="n">03</div><div class="dur">8 săptămâni</div></div>
+        <div class="prog-body">
+          <div class="prog-badge">Familie & Codependență</div>
+          <h3>Program Codependență & Familie</h3>
+          <p>Dacă cineva drag are o adicție, ai nevoie de suport la fel de mult ca el. Codependența — grija excesivă care îi face rău celuilalt și te epuizează pe tine — e ea însăși un tipar care se poate schimba.</p>
+          <ul class="prog-includes">
+            <li>Evaluare individuală și plan de lucru personalizat</li>
+            <li>Terapie individuală — recunoașterea tiparelor codependente</li>
+            <li>Sesiuni de terapie de cuplu sau familie (opțional)</li>
+            <li>Grup de suport pentru familii — o dată pe lună</li>
+            <li>Ghid: „Ce faci când celălalt nu vrea ajutor"</li>
+          </ul>
+        </div>
+        <div class="prog-pricing"><div class="prog-price">3.200 lei</div><div class="prog-price-sub">Program complet</div><a href="contact.html#programare" class="btn btn-sage">Înscrie-te</a></div>
+      </div>
+
+      <!-- 4 -->
+      <div class="prog-card rev">
+        <div class="prog-num"><div class="n">04</div><div class="dur">10 săptămâni</div></div>
+        <div class="prog-body">
+          <div class="prog-badge">Gambling · Ecrane · Muncă</div>
+          <h3>Program Adicții Comportamentale</h3>
+          <p>Gambling, pornografie, social media, muncă excesivă — adicții fără substanță, la fel de reale. Funcționezi, dar simți că ceva te controlează. Crezi că nu e „destul de grav" ca să ceri ajutor. E.</p>
+          <ul class="prog-includes">
+            <li>Evaluare specializată adicții comportamentale</li>
+            <li>Psihoterapie + tehnici de interviu motivațional specifice</li>
+            <li>Plan de restructurare a rutinelor și triggers-ilor</li>
+            <li>Sesiuni de mindfulness aplicat (opțional)</li>
+            <li>Follow-up la 3 și 6 luni post-program</li>
+          </ul>
+        </div>
+        <div class="prog-pricing"><div class="prog-price">3.800 lei</div><div class="prog-price-sub">Program complet</div><a href="contact.html#programare" class="btn btn-sage">Înscrie-te</a></div>
+      </div>
+
+      <!-- 5 -->
+      <div class="prog-card rev">
+        <div class="prog-num"><div class="n">05</div><div class="dur">Variabil</div></div>
+        <div class="prog-body">
+          <div class="prog-badge">Post-internare</div>
+          <h3>Aftercare Premium</h3>
+          <p>Ești proaspăt externat dintr-un program rezidențial sau spital. Primele 6–12 luni sunt cele mai vulnerabile. Acest program preia exact de unde s-a oprit internarea — cu un plan de continuitate structurat, adaptat nevoilor tale.</p>
+          <ul class="prog-includes">
+            <li>Preluare directă din programul rezidențial anterior</li>
+            <li>Ședințe bisăptămânale în primele 3 luni</li>
+            <li>Coordonare cu psihiatrul de referință</li>
+            <li>Plan de criză personalizat (ce faci dacă simți că recazi)</li>
+            <li>Grup de suport + sesiuni online disponibile oricând</li>
+          </ul>
+        </div>
+        <div class="prog-pricing"><div class="prog-price">1.200 lei</div><div class="prog-price-sub">Per lună</div><a href="contact.html#programare" class="btn btn-sage">Înscrie-te</a></div>
+      </div>
+
     </div>
+  </div>
+</section>
+
+<!-- TABEL COMPARATIV -->
+<section class="section" style="background:rgba(238,232,218,0.5)">
+  <div class="wrap">
+    <div class="eyebrow rev">Comparație</div>
+    <h2 class="sec-title rev">Ce include fiecare program</h2>
+    <div class="compare-table rev">
+      <table>
+        <tr><th>Serviciu inclus</th><th>Outpatient Intensiv</th><th>Menținere</th><th>Codependență</th><th>Comportamental</th><th>Aftercare</th></tr>
+        <tr><td>Evaluare psihologică</td><td><span class="check">✓</span></td><td><span class="dash">—</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td>Psihoterapie individuală</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td>Interviu motivațional</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="dash">—</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td>Consultație psihiatrică</td><td><span class="check">✓</span></td><td><span class="dash">—</span></td><td><span class="dash">—</span></td><td><span class="dash">—</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td>Nutriție clinică</td><td><span class="check">✓</span></td><td><span class="dash">—</span></td><td><span class="dash">—</span></td><td><span class="dash">—</span></td><td><span class="dash">—</span></td></tr>
+        <tr><td>Grup de suport</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td>Sesiuni online</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td>Follow-up post-program</td><td><span class="dash">—</span></td><td><span class="check">✓</span></td><td><span class="dash">—</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section dark-strip">
+  <div class="wrap" style="text-align:center">
+    <div class="eyebrow rev" style="justify-content:center;margin-bottom:22px">Nu știi cu ce program să începi?</div>
+    <h2 class="sec-title rev" style="color:var(--bg3);margin-bottom:20px">Programează o evaluare</h2>
+    <p class="rev" style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;font-style:italic;color:rgba(250,247,242,0.55);max-width:48ch;margin:0 auto 36px">În prima ședință de 50 de minute înțelegem unde ești și ce program se potrivește cel mai bine cu situația ta.</p>
+    <a href="contact.html#programare" class="btn btn-sage rev">Trimite o cerere de evaluare →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand"><a href="index.html" class="foot-logo">de<span class="p">(</span><span class="s">s</span><span class="p">)</span>prinderi</a><p>Prima clinică outpatient specializată în adicții din București.</p></div>
+      <div class="foot-col"><h4>Pagini</h4><a href="programe.html">Programe de recuperare</a><a href="grup-suport.html">Grup de suport</a><a href="faq.html">Întrebări frecvente</a><a href="contact.html">Contact & Programare</a></div>
+      <div class="foot-col"><h4>Programe</h4><a href="programe.html">Outpatient Intensiv</a><a href="programe.html">Menținere</a><a href="programe.html">Codependență</a><a href="programe.html">Aftercare</a></div>
+      <div class="foot-col"><h4>Contact</h4><a href="#">Primăverii, București</a><a href="tel:+40744370179">+40 744 370 179</a><a href="mailto:contact@desprinderi.ro">contact@desprinderi.ro</a><a href="gdpr.html">Politică GDPR</a></div>
+    </div>
+    <div class="foot-bottom"><p>© 2026 de(s)prinderi · Psihoterapie specializată în adicții · București</p><div class="social"><a>f</a><a>ig</a><a>in</a></div></div>
+  </div>
 </footer>
 <script>
-document.querySelectorAll('.faq-question').forEach(item => {
-    item.addEventListener('click', () => {
-        const parent = item.parentElement;
-        parent.classList.toggle('active');
-    });
-});
+function toggleMenu(btn){const links=document.querySelector('.nav-links');const open=links.style.display==='flex';links.style.cssText=open?'':'display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:rgba(242,237,227,0.98);padding:20px 40px;gap:18px;border-bottom:1px solid var(--rule);z-index:99;backdrop-filter:blur(14px)'}
+const obs=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}})},{threshold:0.07});
+document.querySelectorAll('.rev').forEach(el=>obs.observe(el));
 </script>
-</body>
-</html>
+</body></html>

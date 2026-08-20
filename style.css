@@ -1,0 +1,137 @@
+/* ── DESIGN TOKENS ── */
+:root{
+  --bg:       #F2EDE3;   /* pergament — fundalul ilustrației */
+  --bg2:      #EAE3D6;   /* pergament mai închis */
+  --bg3:      #FAF7F2;   /* aproape alb-cald */
+  --ink:      #2C2418;   /* maro-cerneală */
+  --ink2:     #1E1810;   /* maro profund */
+  --sage:     #6B7A4A;   /* salvie — accent principal */
+  --sage2:    #485630;   /* salvie închis */
+  --sage3:    #8A9A6A;   /* salvie deschis */
+  --sage-lt:  #E8EDE0;   /* salvie foarte deschis */
+  --mut:      #82786A;   /* maro-muted */
+  --rule:     #D4CCBA;   /* linie separare */
+}
+
+/* ── RESET & BASE ── */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background-color:var(--bg);
+  background-image:url('bg-texture.jpg');
+  background-repeat:repeat;
+  background-size:400px 400px;
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+/* ── TIPOGRAFIE ── */
+.serif{font-family:'Cormorant Garamond',serif}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(242,237,227,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}
+.nav-in{max-width:1200px;margin:0 auto;padding:0 40px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:-0.01em;flex-shrink:0}
+.logo .s{color:var(--sage)}.logo .p{color:var(--mut);font-size:20px}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-size:13px;color:var(--mut);text-decoration:none;transition:color .2s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:var(--ink)}
+.nav-cta{background:var(--sage)!important;color:var(--bg3)!important;padding:10px 22px;font-weight:500;font-size:13px!important;transition:background .2s!important;white-space:nowrap}
+.nav-cta:hover{background:var(--sage2)!important}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.burger span{width:22px;height:1.5px;background:var(--ink);display:block;transition:all .3s}
+
+/* ── BUTTONS ── */
+.btn{display:inline-block;padding:14px 30px;font-size:13px;font-weight:500;letter-spacing:0.04em;text-decoration:none;transition:all .2s;cursor:pointer;border:none;font-family:'Inter'}
+.btn-sage{background:var(--sage);color:var(--bg3)}.btn-sage:hover{background:var(--sage2)}
+.btn-outline{border:1px solid var(--sage);color:var(--sage);background:transparent}.btn-outline:hover{background:var(--sage);color:var(--bg3)}
+.btn-ghost{border-bottom:1px solid var(--rule);color:var(--ink);padding:14px 0}.btn-ghost:hover{border-color:var(--sage);color:var(--sage)}
+.btn-ink{background:var(--ink);color:var(--bg3)}.btn-ink:hover{background:var(--sage)}
+
+/* ── LAYOUT ── */
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+.section{padding:96px 0}
+.section-sm{padding:64px 0}
+
+/* ── EYEBROW ── */
+.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:0.22em;color:var(--sage);font-weight:500;display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.eyebrow::before{content:'';width:26px;height:1px;background:var(--sage)}
+.eyebrow-lt{color:var(--sage3)}.eyebrow-lt::before{background:var(--sage3)}
+
+/* ── SECTION TITLE ── */
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,52px);font-weight:400;line-height:1.06;letter-spacing:-0.01em}
+
+/* ── SECTION BACKGROUND OVERRIDES — semi-transparent so texture bleeds through ── */
+/* White sections get a light wash, dark sections stay solid */
+.bg-wash{background:rgba(253,251,247,0.55)!important}
+.bg-wash2{background:rgba(238,232,218,0.6)!important}
+
+/* ── PAGE HERO (interior pages) ── */
+.page-hero{padding:140px 0 72px;background:transparent;border-bottom:1px solid var(--rule)}
+.page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,64px);font-weight:400;line-height:1.04;letter-spacing:-0.02em;margin-bottom:18px}
+.page-hero h1 em{font-style:italic;color:var(--sage)}
+.page-hero p{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;font-style:italic;color:var(--mut);max-width:52ch;line-height:1.65}
+
+/* ── FORMS ── */
+.form-box{background:rgba(253,251,247,0.75);border:1px solid var(--rule);padding:44px}
+.form-title{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:var(--ink);margin-bottom:24px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.fg label{font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--mut);font-weight:500}
+.fg input,.fg select,.fg textarea{padding:12px 15px;border:1px solid var(--rule);background:rgba(242,237,227,0.5);font-size:14px;font-family:'Inter';color:var(--ink);outline:none;transition:border-color .2s;-webkit-appearance:none;border-radius:0}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--sage)}
+.fg textarea{min-height:100px;resize:vertical}
+.form-note{font-size:12px;color:var(--mut);margin-top:12px;line-height:1.55}
+.form-submit{width:100%;background:var(--sage);color:var(--bg3);padding:15px;font-family:'Inter';font-size:13.5px;font-weight:500;letter-spacing:0.04em;border:none;cursor:pointer;transition:background .2s;margin-top:4px}
+.form-submit:hover{background:var(--sage2)}
+
+/* ── CARDS ── */
+.card{background:rgba(253,251,247,0.65);border:1px solid var(--rule);padding:36px;transition:all .3s}
+.card:hover{border-color:var(--sage);transform:translateY(-3px);box-shadow:0 12px 32px rgba(44,36,24,0.07)}
+
+/* ── FAQ ACCORDION ── */
+.faq-item{border-bottom:1px solid var(--rule)}
+.faq-q{width:100%;background:none;border:none;font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:500;color:var(--ink);padding:22px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;cursor:pointer;text-align:left;transition:color .2s}
+.faq-q:hover{color:var(--sage)}
+.faq-q .ic{color:var(--sage);font-size:22px;flex-shrink:0;transition:transform .25s;font-weight:300;font-family:'Inter'}
+.faq-item.open .faq-q{color:var(--sage)}
+.faq-item.open .ic{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{font-size:15px;color:var(--mut);line-height:1.75;padding-bottom:22px}
+
+/* ── REVEAL ── */
+.rev{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.rev.in{opacity:1;transform:none}
+
+/* ── FOOTER ── */
+footer{background:var(--ink2);padding:64px 0 32px}
+.foot-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.foot-logo{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--bg3);text-decoration:none;display:inline-block;margin-bottom:14px}
+.foot-logo .s{color:var(--sage3)}.foot-logo .p{color:rgba(250,247,242,0.3);font-size:22px}
+.foot-brand p{font-size:14px;color:rgba(250,247,242,0.35);line-height:1.7;max-width:28ch;font-family:'Cormorant Garamond',serif;font-style:italic}
+.foot-col h4{font-size:10.5px;text-transform:uppercase;letter-spacing:0.14em;color:rgba(250,247,242,0.25);font-weight:500;margin-bottom:16px}
+.foot-col a{display:block;font-size:14px;color:rgba(250,247,242,0.5);text-decoration:none;margin-bottom:10px;transition:color .2s}
+.foot-col a:hover{color:var(--sage3)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+.foot-bottom p{font-size:12.5px;color:rgba(250,247,242,0.2)}
+.social{display:flex;gap:10px}
+.social a{width:34px;height:34px;border:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;color:rgba(250,247,242,0.35);font-size:12px;text-decoration:none;font-weight:600;transition:all .2s}
+.social a:hover{border-color:var(--sage3);color:var(--sage3)}
+
+/* ── DARK STRIP ── */
+.dark-strip{background:var(--ink2)}
+.dark-strip .eyebrow{color:var(--sage3)}.dark-strip .eyebrow::before{background:var(--sage3)}
+.dark-strip .sec-title{color:var(--bg3)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .form-row{grid-template-columns:1fr}
+  .nav-links{display:none}.burger{display:flex}
+}
+@media(max-width:640px){
+  .wrap{padding:0 24px}.section{padding:64px 0}.section-sm{padding:48px 0}
+  .page-hero{padding:110px 0 52px}
+}
+@media(prefers-reduced-motion:reduce){.rev{opacity:1;transform:none}}
