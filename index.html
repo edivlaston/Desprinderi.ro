@@ -17,17 +17,28 @@ gtag("config", "G-QEXH2SYB3G");
 <link rel="stylesheet" href="style.css">
 <style>
 /* ── INDEX-ONLY STYLES ── */
-.hero{min-height:calc(100vh - 72px);display:grid;grid-template-columns:1.05fr 0.95fr;align-items:center;padding-top:72px;gap:0}
-.hero-l{display:flex;flex-direction:column;justify-content:center;padding:64px 48px 64px 80px;position:relative;z-index:2}
-.hero-r{display:flex;align-items:center;justify-content:center;padding:40px 60px 40px 20px}
-.hero-r img{width:100%;max-width:460px;height:auto;object-fit:contain;display:block}
-.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,66px);font-weight:400;line-height:1.05;letter-spacing:-0.02em;margin-bottom:24px}
+.hero{min-height:calc(100vh - 72px);display:grid;grid-template-columns:1fr 0.82fr;align-items:center;padding-top:72px;gap:20px;max-width:1200px;margin:0 auto;padding-left:40px;padding-right:40px}
+.hero-l{display:flex;flex-direction:column;justify-content:center;padding:56px 24px 56px 0;position:relative;z-index:2}
+.hero-r{display:flex;align-items:center;justify-content:center;padding:20px 0}
+.hero-r img{width:100%;max-width:400px;height:auto;object-fit:contain;display:block;mix-blend-mode:multiply}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,64px);font-weight:400;line-height:1.05;letter-spacing:-0.02em;margin-bottom:24px}
 .hero h1 em{font-style:italic;color:var(--sage)}
-.hero-sub{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;font-style:italic;color:var(--mut);line-height:1.65;max-width:44ch;margin-bottom:36px}
-.hero-actions{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:48px}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;font-style:italic;color:var(--mut);line-height:1.65;max-width:46ch;margin-bottom:36px}
+.hero-actions{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:44px}
 .hero-trust{display:flex;gap:36px;padding-top:28px;border-top:1px solid rgba(44,36,24,0.18)}
 .trust .n{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:400;line-height:1;color:var(--sage)}
 .trust .l{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px}
+
+/* ── 3 INTRĂRI DE PUBLIC ── */
+.entries{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.entries-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.entry{padding:52px 40px;border-left:1px solid var(--rule);transition:background .3s;text-decoration:none;display:block}
+.entry:first-child{border-left:none}
+.entry:hover{background:var(--bg3)}
+.entry-tag{font-size:11px;text-transform:uppercase;letter-spacing:0.16em;color:var(--sage);font-weight:500;margin-bottom:16px}
+.entry h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--ink);line-height:1.15;margin-bottom:14px}
+.entry p{font-size:14.5px;color:var(--mut);line-height:1.7;margin-bottom:18px}
+.entry-link{font-size:12px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--sage)}
 /* Hero right: imagine fără chenar, fundal se contopește cu bg */
 
 
@@ -112,22 +123,30 @@ gtag("config", "G-QEXH2SYB3G");
 .news-fine{font-size:12px;color:rgba(250,247,242,0.35);margin-top:10px}
 
 @media(max-width:1024px){
-  .hero{grid-template-columns:1fr;min-height:auto}
-  .hero-r{order:1;padding:32px 32px 8px;background:var(--bg2)}
-  .hero-r img{max-width:340px}
-  .hero-l{order:2;padding:44px 32px 56px;text-align:left}
+  .hero{grid-template-columns:1fr;min-height:auto;padding-left:0;padding-right:0;gap:0}
+  .hero-r{order:1;padding:24px 20px 0}
+  .hero-r img{max-width:300px;mix-blend-mode:multiply}
+  .hero-l{order:2;padding:16px 24px 48px;text-align:center;align-items:center}
+  .hero-sub{max-width:100%}
+  .eyebrow{justify-content:center}
+  .hero-actions{justify-content:center}
+  .hero-trust{justify-content:center}
   .hero-sub{max-width:100%}
   .stats-row,.adictii-grid,.srv-grid,.team-grid,.testi-grid{grid-template-columns:1fr 1fr}
   .process-steps{grid-template-columns:1fr 1fr;gap:32px}.process-steps::before{display:none}
   .art-grid,.problem-split,.news-band .wrap{grid-template-columns:1fr}
+  .entries-grid{grid-template-columns:1fr}
+  .entry{border-left:none;border-top:1px solid var(--rule)}
+  .entry:first-child{border-top:none}
 }
 @media(max-width:640px){
   .stats-row,.adictii-grid,.srv-grid,.team-grid,.testi-grid{grid-template-columns:1fr}
-  .hero-r{padding:28px 24px 4px}.hero-r img{max-width:280px}
-  .hero-l{padding:36px 24px 48px}
-  .hero-actions{gap:16px;margin-bottom:40px}
-  .hero-actions .btn-sage{width:100%;text-align:center}
-  .hero-trust{gap:24px;flex-wrap:wrap}
+  html,body{overflow-x:hidden;max-width:100vw}
+  .hero-r{padding:20px 24px 0}.hero-r img{max-width:260px}
+  .hero-l{padding:12px 24px 44px}
+  .hero-actions{gap:14px;margin-bottom:36px;flex-direction:column;width:100%}
+  .hero-actions .btn{width:100%;text-align:center}
+  .hero-trust{gap:20px;flex-wrap:wrap;justify-content:center}
 }
 </style>
 </head>
@@ -164,7 +183,31 @@ gtag("config", "G-QEXH2SYB3G");
     </div>
   </div>
   <div class="hero-r rev">
-    <img src="hero.jpg" alt="de(s)prinderi — vii cu o deprindere, pleci liber de ea">
+    <img src="hero-faces.jpg" alt="de(s)prinderi — vii cu o deprindere, pleci liber de ea">
+  </div>
+</section>
+
+<!-- 3 INTRĂRI DE PUBLIC -->
+<section class="entries">
+  <div class="entries-grid">
+    <a href="programe.html" class="entry rev">
+      <div class="entry-tag">Vin pentru mine</div>
+      <h3>Simt că am pierdut controlul</h3>
+      <p>Nu trebuie să te internezi ca să iei problema în serios. Poți începe discret, cu un specialist, într-un program structurat — în ritmul tău.</p>
+      <span class="entry-link">Vezi programele →</span>
+    </a>
+    <a href="programe.html" class="entry rev">
+      <div class="entry-tag">Vin pentru cineva drag</div>
+      <h3>Cineva apropiat are o adicție</h3>
+      <p>Nu ești singurul care poartă povara asta. Există un loc unde poți vorbi despre ce trăiești tu — nu doar despre persoana dependentă.</p>
+      <span class="entry-link">Program pentru familie →</span>
+    </a>
+    <a href="programe.html" class="entry rev">
+      <div class="entry-tag">Vin din recuperare</div>
+      <h3>Am ieșit dintr-un tratament</h3>
+      <p>Externarea nu e finalul tratamentului. E începutul menținerii — și aici continui, cu un plan de aftercare care te ține pe drumul tău.</p>
+      <span class="entry-link">Program de menținere →</span>
+    </a>
   </div>
 </section>
 
@@ -298,7 +341,7 @@ gtag("config", "G-QEXH2SYB3G");
       <div class="foot-brand"><a href="index.html" class="foot-logo" style="font-size:44px;letter-spacing:-0.02em">de<span class="p">(</span><span class="s">s</span><span class="p">)</span>prinderi</a><p>Prima clinică outpatient specializată în adicții din București.</p></div>
       <div class="foot-col"><h4>Pagini</h4><a href="programe.html">Programe de recuperare</a><a href="grup-suport.html">Grup de suport</a><a href="faq.html">Întrebări frecvente</a><a href="contact.html">Contact & Programare</a></div>
       <div class="foot-col"><h4>Servicii</h4><a href="programe.html">Terapie individuală</a><a href="programe.html">Interviu motivațional</a><a href="grup-suport.html">Grup vineri 17:00</a><a href="programe.html">Nutriție & Psihiatrie</a></div>
-      <div class="foot-col"><h4>Contact</h4><a href="#">Primăverii, București</a><a href="tel:+40744370179">+40 744 370 179</a><a href="mailto:contact@desprinderi.ro">contact@desprinderi.ro</a><a href="gdpr.html">Politică GDPR</a></div>
+      <div class="foot-col"><h4>Contact</h4><a href="#">Primăverii, București</a><a href="tel:+40744370179">+40 744 370 179</a><a href="mailto:office@desprinderi.ro">office@desprinderi.ro</a><a href="gdpr.html">Politică GDPR</a></div>
     </div>
     <div class="foot-bottom"><p>© 2026 de(s)prinderi · Psihoterapie specializată în adicții · București</p><div class="social"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="LinkedIn">in</a></div></div>
   </div>

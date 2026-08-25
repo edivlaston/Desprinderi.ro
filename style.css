@@ -1,8 +1,8 @@
 /* ── DESIGN TOKENS ── */
 :root{
-  --bg:       #F2EDE3;   /* pergament — fundalul ilustrației */
-  --bg2:      #EAE3D6;   /* pergament mai închis */
-  --bg3:      #FAF7F2;   /* aproape alb-cald */
+  --bg:       #F5EBDC;   /* nisip — exact tonul ilustrației */
+  --bg2:      #EFE4D2;   /* nisip mai cald */
+  --bg3:      #FCF8F1;   /* aproape alb-cald */
   --ink:      #2C2418;   /* maro-cerneală */
   --ink2:     #5C4A32;   /* maro cald profund */
   --sage:     #6B7A4A;   /* salvie — accent principal */
@@ -17,10 +17,10 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  background-color:var(--bg);
+  background-color:#F5EBDC;
   background-image:url('bg-texture.jpg');
   background-repeat:repeat;
-  background-size:400px 400px;
+  background-size:450px 450px;
   color:var(--ink);
   font-family:'Inter',sans-serif;
   -webkit-font-smoothing:antialiased;
@@ -129,9 +129,13 @@ footer{background:rgba(72,56,36,0.95);padding:64px 0 32px}
 @media(max-width:1024px){
   .form-row{grid-template-columns:1fr}
   .nav-links{display:none}.burger{display:flex}
+  .nav-in{padding:0 20px}
+  html,body{max-width:100%;overflow-x:hidden}
+  img{max-width:100%;height:auto}
 }
 @media(max-width:640px){
-  .wrap{padding:0 24px}.section{padding:64px 0}.section-sm{padding:48px 0}
+  .wrap{padding:0 20px}.section{padding:64px 0}.section-sm{padding:48px 0}
   .page-hero{padding:110px 0 52px}
+  .nav-in{padding:0 16px}
 }
 @media(prefers-reduced-motion:reduce){.rev{opacity:1;transform:none}}
