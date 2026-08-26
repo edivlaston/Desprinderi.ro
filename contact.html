@@ -115,14 +115,17 @@ gtag("config", "G-QEXH2SYB3G");
 
       <div class="form-box rev">
         <div class="form-title">Trimite o cerere de programare</div>
+        <form name="programare" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/multumim.html">
+        <input type="hidden" name="form-name" value="programare">
+        <p style="display:none"><label>Nu completa: <input name="bot-field"></label></p>
         <div class="form-row">
-          <div class="fg"><label>Prenume *</label><input type="text" placeholder="Ioan" required></div>
-          <div class="fg"><label>Telefon *</label><input type="tel" placeholder="+40 7xx xxx xxx" required></div>
+          <div class="fg"><label>Prenume *</label><input type="text" name="prenume" placeholder="Ioan" required></div>
+          <div class="fg"><label>Telefon *</label><input type="tel" name="telefon" placeholder="+40 7xx xxx xxx" required></div>
         </div>
-        <div class="fg"><label>Email *</label><input type="email" placeholder="email@exemplu.ro" required></div>
+        <div class="fg"><label>Email *</label><input type="email" name="email" placeholder="email@exemplu.ro" required></div>
         <div class="fg">
           <label>Ce te-a adus aici? *</label>
-          <select required>
+          <select name="categorie" required>
             <option value="">Alege o categorie</option>
             <option>Alcool sau alte substanțe</option>
             <option>Gambling sau jocuri</option>
@@ -138,7 +141,7 @@ gtag("config", "G-QEXH2SYB3G");
         <div class="form-row">
           <div class="fg">
             <label>Specialist preferat</label>
-            <select>
+            <select name="specialist">
               <option>Fără preferință</option>
               <option>Edi Vlaston — psihoterapeut</option>
               <option>Terapeut 2 — psihoterapeut</option>
@@ -148,20 +151,21 @@ gtag("config", "G-QEXH2SYB3G");
           </div>
           <div class="fg">
             <label>Format preferat</label>
-            <select>
+            <select name="format">
               <option>Față în față — Primăverii</option>
               <option>Online (video)</option>
               <option>Indiferent</option>
             </select>
           </div>
         </div>
-        <div class="fg"><label>Mesaj (opțional)</label><textarea placeholder="Spune-ne, în câteva cuvinte, ce te-a adus aici. Nu trebuie să fie complet sau perfect — suntem obișnuiți să completăm puzzle-ul împreună."></textarea></div>
+        <div class="fg"><label>Mesaj (opțional)</label><textarea name="mesaj" placeholder="Spune-ne, în câteva cuvinte, ce te-a adus aici. Nu trebuie să fie complet sau perfect — suntem obișnuiți să completăm puzzle-ul împreună."></textarea></div>
         <div>
-          <input type="checkbox" id="gdpr-contact" style="margin-top:3px;accent-color:var(--sage);flex-shrink:0" required>
+          <input type="checkbox" name="gdpr-consimtamant" id="gdpr-contact" value="da" style="margin-top:3px;accent-color:var(--sage);flex-shrink:0" required>
           <label for="gdpr-contact" style="font-size:12.5px;color:var(--mut);line-height:1.55">Sunt de acord cu prelucrarea datelor mele personale conform <a href="gdpr.html" style="color:var(--sage)">Politicii GDPR</a>. Înțeleg că datele mele sunt confidențiale și nu vor fi divulgate terților fără acordul meu explicit.</label>
         </div>
-        <button class="form-submit" type="button">Trimite cererea →</button>
+        <button class="form-submit" type="submit">Trimite cererea →</button>
         <p class="form-note">Câmpurile marcate cu * sunt obligatorii. Răspundem în maxim 24 de ore lucrătoare. Dacă preferi să vorbim direct, sună la +40 744 370 179.</p>
+        </form>
       </div>
     </div>
   </div>

@@ -165,14 +165,17 @@ gtag("config", "G-QEXH2SYB3G");
       </div>
       <div class="form-box rev">
         <div class="form-title">Cerere de participare</div>
+        <form name="grup-suport" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/multumim.html">
+        <input type="hidden" name="form-name" value="grup-suport">
+        <p style="display:none"><label>Nu completa: <input name="bot-field"></label></p>
         <div class="form-row">
-          <div class="fg"><label>Prenume</label><input type="text" placeholder="Ioan"></div>
-          <div class="fg"><label>Telefon</label><input type="tel" placeholder="+40 7xx xxx xxx"></div>
+          <div class="fg"><label>Prenume</label><input type="text" name="prenume" placeholder="Ioan" required></div>
+          <div class="fg"><label>Telefon</label><input type="tel" name="telefon" placeholder="+40 7xx xxx xxx" required></div>
         </div>
-        <div class="fg"><label>Email</label><input type="email" placeholder="email@exemplu.ro"></div>
+        <div class="fg"><label>Email</label><input type="email" name="email" placeholder="email@exemplu.ro" required></div>
         <div class="fg">
           <label>Tema care te interesează cel mai mult</label>
-          <select>
+          <select name="tema">
             <option value="">Oricare — terapeutul decide tema</option>
             <option>Triggers și declanșatori</option>
             <option>Rușinea și identitatea</option>
@@ -184,19 +187,20 @@ gtag("config", "G-QEXH2SYB3G");
         </div>
         <div class="fg">
           <label>Format preferat</label>
-          <select>
+          <select name="format">
             <option>Față în față — Primăverii, București</option>
             <option>Online (video)</option>
             <option>Indiferent</option>
           </select>
         </div>
-        <div class="fg"><label>Mesaj (opțional)</label><textarea placeholder="Orice vrei să știm înainte de prima sesiune."></textarea></div>
+        <div class="fg"><label>Mesaj (opțional)</label><textarea name="mesaj" placeholder="Orice vrei să știm înainte de prima sesiune."></textarea></div>
         <div>
-          <input type="checkbox" id="gdpr-grup" style="margin-top:3px;accent-color:var(--sage);flex-shrink:0">
+          <input type="checkbox" id="gdpr-grup" name="gdpr" required style="margin-top:3px;accent-color:var(--sage);flex-shrink:0">
           <label for="gdpr-grup" style="font-size:12.5px;color:var(--mut);line-height:1.55">Sunt de acord cu prelucrarea datelor mele personale conform <a href="gdpr.html" style="color:var(--sage)">Politicii GDPR</a>. Înțeleg că datele mele nu vor fi divulgate terților și că pot solicita ștergerea lor oricând.</label>
         </div>
-        <button class="form-submit" type="button">Rezervă locul meu →</button>
+        <button class="form-submit" type="submit">Rezervă locul meu →</button>
         <p class="form-note">Te contactăm în maxim 24 ore lucrătoare. Locurile sunt limitate la 10 per sesiune.</p>
+        </form>
       </div>
     </div>
   </div>
