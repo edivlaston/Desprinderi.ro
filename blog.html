@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QEXH2SYB3G"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-QEXH2SYB3G");
+</script>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Articole despre adicții, recuperare și schimbare — scrise de un psihoterapeut specializat. Alcool, adicții comportamentale, codependență și familie.">
+<title>Articole & Resurse — de(s)prinderi</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.blog-filters{display:flex;gap:10px;flex-wrap:wrap;margin-top:40px;margin-bottom:8px}
+.filter-btn{font-family:'Inter';font-size:13px;font-weight:500;color:var(--mut);background:transparent;border:1px solid var(--rule);padding:9px 18px;cursor:pointer;transition:all .2s;letter-spacing:0.02em}
+.filter-btn:hover{border-color:var(--sage);color:var(--sage)}
+.filter-btn.active{background:var(--sage);border-color:var(--sage);color:var(--bg3)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:44px}
+.blog-card{background:rgba(253,251,247,0.55);border:1px solid var(--rule);overflow:hidden;transition:transform .3s,box-shadow .3s;text-decoration:none;display:flex;flex-direction:column}
+.blog-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(44,36,24,0.09)}
+.blog-card-img{height:190px;background:linear-gradient(150deg,var(--sage3),var(--sage));position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.blog-card-img img{width:100%;height:100%;object-fit:cover}
+.blog-card-img .ph{font-family:'Cormorant Garamond',serif;font-size:48px;color:rgba(253,251,247,0.5)}
+.blog-card-body{padding:26px 26px 28px;display:flex;flex-direction:column;flex:1}
+.blog-card-cat{font-size:10.5px;text-transform:uppercase;letter-spacing:0.14em;color:var(--sage);font-weight:600;margin-bottom:12px}
+.blog-card h2{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:500;color:var(--ink);line-height:1.18;margin-bottom:12px}
+.blog-card p{font-size:14px;color:var(--mut);line-height:1.65;margin-bottom:18px;flex:1}
+.blog-card-meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--mut);padding-top:16px;border-top:1px solid var(--rule)}
+.blog-card-read{color:var(--sage);font-weight:500;letter-spacing:0.04em}
+.blog-empty{text-align:center;padding:80px 20px;color:var(--mut);font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic}
+@media(max-width:1024px){.blog-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.blog-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-in">
+    <a href="index.html" class="logo" style="font-size:42px;letter-spacing:-0.02em">de<span class="p">(</span><span class="s">s</span><span class="p">)</span>prinderi</a>
+    <div class="nav-links">
+      <a href="programe.html">Programe</a>
+      <a href="grup-suport.html">Grup de suport</a>
+      <a href="blog.html" class="active">Articole</a>
+      <a href="faq.html">Întrebări</a>
+      <a href="contact.html#programare" class="nav-cta">Programează</a>
+    </div>
+    <button class="burger" aria-label="Meniu" onclick="toggleMenu(this)"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Psihoeducație</div>
+    <h1>Articole &<br><em>Resurse</em></h1>
+    <p>Despre adicții, recuperare și schimbare. Scris pentru cei care trăiesc asta — sau pentru cei care vor să înțeleagă.</p>
+  </div>
+</div>
+
+<section class="section" style="padding-top:56px">
+  <div class="wrap">
+    <div class="blog-filters" id="filters"></div>
+    <div class="blog-grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<div style="background:var(--sage2);padding:64px 0;margin-top:40px">
+  <div class="wrap" style="text-align:center">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.5vw,38px);font-weight:400;color:var(--bg3);line-height:1.1;margin-bottom:12px">Un articol nou, direct în inbox</h2>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:rgba(250,247,242,0.6);margin-bottom:28px">Fără spam. Doar articole despre adicții și recuperare.</p>
+    <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/multumim.html" style="display:flex;max-width:420px;margin:0 auto;gap:0">
+      <input type="hidden" name="form-name" value="newsletter">
+      <p style="display:none"><label>Nu completa: <input name="bot-field"></label></p>
+      <input type="email" name="email" placeholder="adresa ta de email" required style="flex:1;padding:15px 18px;border:none;background:rgba(250,247,242,0.95);font-size:14px;font-family:'Inter';color:var(--ink);outline:none">
+      <button type="submit" style="background:var(--sage);color:var(--bg3);padding:15px 24px;border:none;font-family:'Inter';font-size:13px;font-weight:500;cursor:pointer;white-space:nowrap">Abonează-mă</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand"><a href="index.html" class="foot-logo" style="font-size:44px;letter-spacing:-0.02em">de<span class="p">(</span><span class="s">s</span><span class="p">)</span>prinderi</a><p>Prima clinică outpatient specializată în adicții din București.</p></div>
+      <div class="foot-col"><h4>Pagini</h4><a href="programe.html">Programe de recuperare</a><a href="grup-suport.html">Grup de suport</a><a href="blog.html">Articole</a><a href="contact.html">Contact & Programare</a></div>
+      <div class="foot-col"><h4>Articole</h4><a href="blog.html">Toate articolele</a><a href="blog.html">Despre alcool</a><a href="blog.html">Pentru familii</a></div>
+      <div class="foot-col"><h4>Contact</h4><a href="#">Primăverii, București</a><a href="tel:+40744370179">+40 744 370 179</a><a href="mailto:office@desprinderi.ro">office@desprinderi.ro</a><a href="gdpr.html">Politică GDPR</a></div>
+    </div>
+    <div class="foot-bottom"><p>© 2026 de(s)prinderi · Psihoterapie specializată în adicții · București</p><div class="social"><a>f</a><a>ig</a><a>in</a></div></div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(btn){const links=document.querySelector('.nav-links');const open=links.style.display==='flex';links.style.cssText=open?'':'display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:rgba(245,235,220,0.98);padding:20px 40px;gap:18px;border-bottom:1px solid var(--rule);z-index:99;backdrop-filter:blur(14px)'}
+
+let allArticles=[];let activeFilter='Toate';
+function fmtDate(d){const m=['ian','feb','mar','apr','mai','iun','iul','aug','sep','oct','noi','dec'];const p=d.split('-');return p[2]+' '+m[parseInt(p[1])-1]+' '+p[0];}
+function render(){
+  const grid=document.getElementById('grid');
+  const items=activeFilter==='Toate'?allArticles:allArticles.filter(a=>a.categorie===activeFilter);
+  if(!items.length){grid.innerHTML='<div class="blog-empty">Niciun articol în această categorie încă.</div>';return;}
+  grid.innerHTML=items.map(a=>{
+    const img=a.imagine?`<img src="${a.imagine}" alt="${a.titlu}">`:`<span class="ph">de(s)</span>`;
+    return `<a class="blog-card" href="articol.html?a=${a.slug||a.id}">
+      <div class="blog-card-img">${img}</div>
+      <div class="blog-card-body">
+        <div class="blog-card-cat">${a.categorie}</div>
+        <h2>${a.titlu}</h2>
+        <p>${a.rezumat}</p>
+        <div class="blog-card-meta"><span>${fmtDate(a.data)} · ${a.timp_citire||''}</span><span class="blog-card-read">Citește →</span></div>
+      </div></a>`;
+  }).join('');
+}
+function buildFilters(){
+  const cats=['Toate',...new Set(allArticles.map(a=>a.categorie))];
+  document.getElementById('filters').innerHTML=cats.map(c=>`<button class="filter-btn${c==='Toate'?' active':''}" data-cat="${c}">${c}</button>`).join('');
+  document.querySelectorAll('.filter-btn').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');activeFilter=b.dataset.cat;render();
+  }));
+}
+fetch('articole.json').then(r=>r.json()).then(d=>{
+  allArticles=d.sort((a,b)=>b.data.localeCompare(a.data));
+  buildFilters();render();
+}).catch(e=>{document.getElementById('grid').innerHTML='<div class="blog-empty">Articolele se încarcă în curând.</div>';});
+</script>
+</body></html>
