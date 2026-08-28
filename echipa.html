@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Echipa — de(s)prinderi</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:3px;margin-top:52px}
+.member{background:var(--bg3);border:1px solid var(--rule);display:grid;grid-template-columns:280px 1fr}
+.member-photo{background:linear-gradient(150deg,var(--bg2),#ccc4a8);position:relative;min-height:360px}
+.member-photo::after{content:'FOTO';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:0.2em;color:var(--mut);opacity:0.3}
+.member-body{padding:40px}
+.member-role{font-size:11px;text-transform:uppercase;letter-spacing:0.14em;color:var(--sage);font-weight:600;margin-bottom:8px}
+.member-body h2{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;color:var(--ink);margin-bottom:14px}
+.member-body p{font-size:15px;color:var(--mut);line-height:1.75;margin-bottom:14px}
+.member-spec{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}
+.spec{font-size:12px;color:var(--sage2);border:1px solid var(--sage3);padding:5px 12px;background:var(--sage-lt)}
+.member-credentials{border-top:1px solid var(--rule);padding-top:18px;margin-top:6px}
+.credential{font-size:13px;color:var(--mut);padding:4px 0;display:flex;gap:8px}
+.credential::before{content:'◦';color:var(--sage)}
+
+/* Filosofie -->
+.filozofie{background:var(--sage2);padding:80px 0}
+.filozofie .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.filozofie h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,44px);color:var(--white);margin-bottom:20px}
+.filozofie p{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:rgba(253,251,247,0.65);line-height:1.7}
+.filozofie-quote{border-left:2px solid var(--sage3);padding:24px 28px;background:rgba(253,251,247,0.06)}
+.filozofie-quote blockquote{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;font-style:italic;color:var(--white);line-height:1.55}
+.filozofie-quote cite{font-size:13px;color:rgba(253,251,247,0.4);display:block;margin-top:12px}
+
+/* Colaboreaza -->
+.join{background:var(--bg2);padding:72px 0;text-align:center}
+.join h2{font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--ink);margin-bottom:14px}
+.join p{font-size:16px;color:var(--mut);max-width:52ch;margin:0 auto 28px}
+
+@media(max-width:1024px){
+  .team-grid{grid-template-columns:1fr}
+  .member{grid-template-columns:1fr;min-height:auto}
+  .member-photo{min-height:240px}
+  .filozofie .wrap{grid-template-columns:1fr;gap:36px}
+}
+</style>
+</head>
+<body>
+
+<div class="criza"><p>Ai nevoie urgentă? <a href="tel:+40744370179">+40 744 370 179</a> &nbsp;·&nbsp; Criză: <a href="tel:0800800120">0800 800 120</a> (gratuit)</p></div>
+<nav id="navbar">
+  <div class="nav-in">
+    <a href="index.html" class="logo">de<span class="par">(</span><span class="s">s</span><span class="par">)</span>prinderi</a>
+    <div class="nav-links" id="navLinks">
+      <a href="programe.html">Programe</a><a href="grup-suport.html">Grup de suport</a><a href="echipa.html" class="active">Echipă</a><a href="blog.html">Articole</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="contact.html" class="nav-cta">Programează</a>
+    </div>
+    <a href="tel:+40744370179" class="nav-tel">📞 +40 744 370 179</a>
+    <button class="burger" onclick="toggleNav()" aria-label="Meniu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow rev">Oamenii din spatele clinicii</div>
+    <h1 class="rev">Echipa de(s)prinderi</h1>
+    <p class="rev">Specialiști cu formare solidă, cu experiență directă în adicții și cu un principiu comun: nu judecăm — însoțim.</p>
+  </div>
+</div>
+
+<section class="section" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="team-grid">
+      <div class="member rev">
+        <div class="member-photo"></div>
+        <div class="member-body">
+          <div class="member-role">Fondator · Psihoterapeut</div>
+          <h2>Edi Vlaston</h2>
+          <p>20 de ani în management înainte de a deveni psihoterapeut. Această experiență aduce în cabinetul de terapie o perspectivă rară — înțelegerea presiunilor reale din viața profesională și din relații.</p>
+          <p>Lucrează cu adicții comportamentale, relaționale și burnout, cu accent pe bărbații care duc singuri prea mult. Direct, fără ocolișuri, bărbat la bărbat când e cazul.</p>
+          <div class="member-spec">
+            <span class="spec">Interviu motivațional</span>
+            <span class="spec">Adicții comportamentale</span>
+            <span class="spec">Codependență</span>
+            <span class="spec">Burnout</span>
+          </div>
+          <div class="member-credentials">
+            <div class="credential">Psihoterapeut atestat — Colegiul Psihologilor din România</div>
+            <div class="credential">Formare în Interviu Motivațional</div>
+            <div class="credential">Terapie centrată pe persoană</div>
+            <div class="credential">Rating 4.9 — Hilio.ro</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="member rev rev-d1">
+        <div class="member-photo"></div>
+        <div class="member-body">
+          <div class="member-role">Psihoterapeut</div>
+          <h2>Terapeut 2</h2>
+          <p>Specializat în adicții comportamentale și terapie de familie. Lucrează cu sistemul, nu doar cu individul — pentru că adicția afectează întotdeauna mai mult de o persoană.</p>
+          <p>Moderează grupurile de suport și coordonează programul de psihoeducație pentru familii și aparținători.</p>
+          <div class="member-spec">
+            <span class="spec">Gambling</span>
+            <span class="spec">Adicții ecrane</span>
+            <span class="spec">Terapie familie</span>
+            <span class="spec">Grup de suport</span>
+          </div>
+          <div class="member-credentials">
+            <div class="credential">Psihoterapeut atestat — CPR</div>
+            <div class="credential">Formare în terapie sistemică</div>
+            <div class="credential">Facilitator grup de suport</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="member rev">
+        <div class="member-photo"></div>
+        <div class="member-body">
+          <div class="member-role">Nutriționist clinic</div>
+          <h2>Nutriționist</h2>
+          <p>Nutriție comportamentală și clinică, cu specializare în adicțiile alimentare și deficiențele nutriționale specifice alcoolismului. Lucrează integrat cu echipa terapeutică.</p>
+          <p>Crede că relația cu mâncarea e adesea primul loc unde se vede o problemă mai adâncă — și ultimul loc unde se caută ajutor.</p>
+          <div class="member-spec">
+            <span class="spec">Adicții alimentare</span>
+            <span class="spec">Nutriție în alcoolism</span>
+            <span class="spec">Comportament alimentar</span>
+          </div>
+          <div class="member-credentials">
+            <div class="credential">Nutriționist atestat</div>
+            <div class="credential">Specializare nutriție clinică</div>
+            <div class="credential">Formare comportamentală</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="member rev rev-d1">
+        <div class="member-photo"></div>
+        <div class="member-body">
+          <div class="member-role">Medic psihiatru · colaborator</div>
+          <h2>Dr. Psihiatru</h2>
+          <p>Evaluare psihiatrică și suport medicamentos pentru cazurile care necesită intervenție farmacologică. Colaborează strâns cu echipa terapeutică — fiecare decizie e parte din planul integrat.</p>
+          <p>Nu prescrie izolat. Fiecare recomandare e discutată cu terapeutul și cu pacientul.</p>
+          <div class="member-spec">
+            <span class="spec">Psihiatrie adicții</span>
+            <span class="spec">Comorbidități</span>
+            <span class="spec">Evaluare</span>
+          </div>
+          <div class="member-credentials">
+            <div class="credential">Medic specialist psihiatru</div>
+            <div class="credential">Colegiul Medicilor din România</div>
+            <div class="credential">Experiență în psihiatria adicțiilor</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILOZOFIE -->
+<div class="filozofie">
+  <div class="wrap">
+    <div class="rev">
+      <h2>Filozofia noastră</h2>
+      <p>Nu credem că adicția e o slăbiciune de caracter. Credem că e o soluție la o problemă — una care, în timp, devine o problemă și mai mare. Munca noastră e să găsim problema de sub soluție.</p>
+      <a href="programe.html" class="btn" style="background:var(--white);color:var(--sage2);font-weight:600;margin-top:24px;display:inline-flex">Descoperă programele noastre</a>
+    </div>
+    <div class="rev rev-d1">
+      <div class="filozofie-quote">
+        <blockquote>„Oamenii nu vin la terapie pentru că sunt rupți. Vin pentru că au funcționat prea mult timp cu o strategie care nu mai merge."</blockquote>
+        <cite>— Edi Vlaston, fondator de(s)prinderi</cite>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COLABOREAZA -->
+<div class="join">
+  <div class="wrap">
+    <h2 class="rev">Ești specialist și vrei să colaborezi?</h2>
+    <p class="rev">Clinica crește — căutăm psihoterapeuți, psihiatri și nutriționiști cu experiență în adicții care să se alăture echipei.</p>
+    <a href="contact.html" class="btn btn-sage rev" style="padding:15px 36px;font-size:14px">Ia legătura cu noi</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand"><a href="index.html" class="foot-logo">de<span class="par">(</span><span class="s">s</span><span class="par">)</span>prinderi</a><p>Psihoterapie specializată în adicții, București.</p><div class="social-row" style="margin-top:20px"><a href="#">f</a><a href="#">ig</a><a href="#">in</a></div></div>
+      <div class="foot-col"><h4>Programe</h4><a href="programe.html">Outpatient Intensiv</a><a href="programe.html">Menținere</a><a href="programe.html">Codependență</a><a href="grup-suport.html">Grup de suport</a></div>
+      <div class="foot-col"><h4>Clinică</h4><a href="echipa.html">Echipă</a><a href="blog.html">Articole</a><a href="faq.html">FAQ</a><a href="gdpr.html">GDPR</a></div>
+      <div class="foot-col"><h4>Contact</h4><a href="#">Primăverii, București</a><a href="tel:+40744370179">+40 744 370 179</a><a href="contact.html">Programare</a></div>
+    </div>
+    <div class="foot-bottom"><p>© 2026 de(s)prinderi</p><div style="display:flex;gap:20px"><a href="gdpr.html">Confidențialitate</a></div></div>
+  </div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');obs.unobserve(x.target)}}),{threshold:.06});
+document.querySelectorAll('.rev').forEach(el=>obs.observe(el));
+window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20));
+let open=false;
+function toggleNav(){open=!open;const nl=document.getElementById('navLinks');nl.style.cssText=open?'display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--bg);padding:20px 40px;gap:10px;border-bottom:1px solid var(--rule);z-index:199':'';}
+</script>
+</body>
+</html>
