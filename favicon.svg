@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#F5EBDC"/>
+  <text x="32" y="44" text-anchor="middle" font-family="Georgia, 'Cormorant Garamond', serif" font-size="38" font-weight="400">
+    <tspan fill="#82786A">(</tspan><tspan fill="#6B7A4A">s</tspan><tspan fill="#82786A">)</tspan>
+  </text>
+</svg>

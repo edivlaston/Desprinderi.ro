@@ -13,6 +13,15 @@ gtag("config", "G-QEXH2SYB3G");
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title id="page-title">Articol — de(s)prinderi</title>
 <meta id="meta-desc" name="description" content="Articole despre adicții și recuperare.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="de(s)prinderi">
+<meta id="og-title" property="og:title" content="Articole & Resurse — de(s)prinderi">
+<meta id="og-desc" property="og:description" content="Articole despre adicții, recuperare și schimbare.">
+<meta id="og-url" property="og:url" content="https://desprinderi.ro/blog.html">
+<meta property="og:image" content="https://desprinderi.ro/hero-faces.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
@@ -52,8 +61,10 @@ gtag("config", "G-QEXH2SYB3G");
     <div class="nav-links">
       <a href="programe.html">Programe</a>
       <a href="grup-suport.html">Grup de suport</a>
+      <a href="echipa.html">Echipă</a>
       <a href="blog.html">Articole</a>
       <a href="faq.html">Întrebări</a>
+      <a href="contact.html">Contact</a>
       <a href="contact.html#programare" class="nav-cta">Programează</a>
     </div>
     <button class="burger" aria-label="Meniu" onclick="toggleMenu(this)"><span></span><span></span><span></span></button>
@@ -129,6 +140,9 @@ fetch('articole.json').then(r=>r.json()).then(all=>{
   const a=all.find(x=>(x.slug||x.id)===key)||all[0];
   document.getElementById('page-title').textContent=a.titlu+' — de(s)prinderi';
   document.getElementById('meta-desc').setAttribute('content',a.meta_descriere||a.rezumat);
+  document.getElementById('og-title').setAttribute('content',a.titlu+' — de(s)prinderi');
+  document.getElementById('og-desc').setAttribute('content',a.meta_descriere||a.rezumat);
+  document.getElementById('og-url').setAttribute('content',location.href);
   document.getElementById('a-cat').textContent=a.categorie;
   document.getElementById('a-titlu').textContent=a.titlu;
   document.getElementById('a-autor').textContent=a.autor||'Edi Vlaston';
