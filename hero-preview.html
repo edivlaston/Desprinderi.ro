@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hero — propuneri</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.variant-label{position:sticky;top:0;z-index:50;background:var(--ink);color:var(--bg3);font-size:12px;letter-spacing:0.14em;text-transform:uppercase;padding:10px 40px;font-weight:500}
+.variant-label span{color:var(--sage3);font-weight:400;text-transform:none;letter-spacing:0;margin-left:12px}
+
+/* ── comun ── */
+.h1{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,64px);font-weight:400;line-height:1.05;letter-spacing:-0.02em;margin-bottom:24px}
+.h1 em{font-style:italic;color:var(--sage)}
+.sub{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;font-style:italic;color:var(--mut);line-height:1.65;max-width:46ch;margin-bottom:36px}
+.actions{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:44px}
+.trust{display:flex;gap:36px;padding-top:28px;border-top:1px solid rgba(44,36,24,0.18)}
+.trust .t .n{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:400;line-height:1;color:var(--sage)}
+.trust .t .l{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px}
+
+/* ── V1: AMPLU / full-bleed dreapta ── */
+.v1{display:grid;grid-template-columns:1fr 0.92fr;align-items:center;max-width:1200px;margin:0 auto;padding:40px;min-height:88vh;gap:20px}
+.v1-l{padding:40px 24px 40px 0}
+.v1-r{align-self:stretch;display:flex;align-items:flex-end;justify-content:center;position:relative}
+.v1-r img{width:100%;max-width:560px;height:auto;object-fit:contain;mix-blend-mode:multiply;margin-bottom:-40px}
+
+/* ── V2: WATERMARK / imagine amplă în fundal, text peste ── */
+.v2{position:relative;max-width:1280px;margin:0 auto;min-height:90vh;display:flex;align-items:center;overflow:hidden}
+.v2-img{position:absolute;top:0;right:-4%;height:100%;display:flex;align-items:center;pointer-events:none}
+.v2-img img{height:98%;width:auto;object-fit:contain;mix-blend-mode:multiply;opacity:0.92}
+.v2-img::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 8%,rgba(245,235,220,0.4) 42%,transparent 72%)}
+.v2-l{position:relative;z-index:2;padding:0 40px;max-width:640px}
+
+/* ── V3: POSTER CENTRAT ── */
+.v3{max-width:820px;margin:0 auto;padding:56px 40px 80px;text-align:center;display:flex;flex-direction:column;align-items:center;min-height:88vh;justify-content:center}
+.v3-img{width:100%;max-width:340px;margin:0 auto 8px}
+.v3-img img{width:100%;height:auto;mix-blend-mode:multiply}
+.v3 .sub{margin-left:auto;margin-right:auto}
+.v3 .actions{justify-content:center}
+
+@media(max-width:900px){
+  .v1{grid-template-columns:1fr}
+  .v2-img{position:relative;right:auto;height:auto;justify-content:center;opacity:1}
+  .v2-img img{height:auto;width:70%}
+  .v2-img::after{display:none}
+  .v2{flex-direction:column;min-height:auto;padding:20px 0}
+}
+</style>
+</head>
+<body>
+
+<!-- V1 -->
+<div class="variant-label">Varianta 1 — „Amplu"<span>imagine mare, ancorată dreapta, iese ușor din cadru sus</span></div>
+<section class="v1">
+  <div class="v1-l">
+    <div class="eyebrow">Psihoterapie specializată · Primăverii · București</div>
+    <h1 class="h1">Vii cu o<br><em>deprindere.</em><br>Pleci liber de ea.</h1>
+    <p class="sub">Prima clinică outpatient din București specializată exclusiv în adicții. Echipă integrată, abordare dovedită, confidențialitate garantată.</p>
+    <div class="actions">
+      <a href="#" class="btn btn-sage">Programează o evaluare</a>
+      <a href="#" class="btn btn-ghost">Descoperă programele</a>
+    </div>
+    <div class="trust">
+      <div class="t"><div class="n">5</div><div class="l">Programe</div></div>
+      <div class="t"><div class="n">48h</div><div class="l">Prima ședință</div></div>
+      <div class="t"><div class="n">100%</div><div class="l">Confidențial</div></div>
+    </div>
+  </div>
+  <div class="v1-r"><img src="hero-faces.jpg" alt="de(s)prinderi"></div>
+</section>
+
+<!-- V2 -->
+<div class="variant-label">Varianta 2 — „Watermark"<span>imagine amplă în fundal, textul se așază peste ea</span></div>
+<section class="v2">
+  <div class="v2-img"><img src="hero-faces.jpg" alt="de(s)prinderi"></div>
+  <div class="v2-l">
+    <div class="eyebrow">Psihoterapie specializată · Primăverii · București</div>
+    <h1 class="h1">Vii cu o<br><em>deprindere.</em><br>Pleci liber de ea.</h1>
+    <p class="sub">Prima clinică outpatient din București specializată exclusiv în adicții. Echipă integrată, abordare dovedită, confidențialitate garantată.</p>
+    <div class="actions">
+      <a href="#" class="btn btn-sage">Programează o evaluare</a>
+      <a href="#" class="btn btn-ghost">Descoperă programele</a>
+    </div>
+    <div class="trust">
+      <div class="t"><div class="n">5</div><div class="l">Programe</div></div>
+      <div class="t"><div class="n">48h</div><div class="l">Prima ședință</div></div>
+      <div class="t"><div class="n">100%</div><div class="l">Confidențial</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- V3 -->
+<div class="variant-label">Varianta 3 — „Poster centrat"<span>imaginea = eroul; „S"-ul ei subliniază marca</span></div>
+<section class="v3">
+  <div class="eyebrow" style="justify-content:center">Psihoterapie specializată · Primăverii · București</div>
+  <div class="v3-img"><img src="hero-faces.jpg" alt="de(s)prinderi"></div>
+  <h1 class="h1">Vii cu o <em>deprindere.</em> Pleci liber de ea.</h1>
+  <p class="sub">Prima clinică outpatient din București specializată exclusiv în adicții. Echipă integrată, abordare dovedită, confidențialitate garantată.</p>
+  <div class="actions">
+    <a href="#" class="btn btn-sage">Programează o evaluare</a>
+    <a href="#" class="btn btn-ghost">Descoperă programele</a>
+  </div>
+</section>
+
+</body></html>
