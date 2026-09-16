@@ -30,6 +30,8 @@ gtag("config", "G-QEXH2SYB3G");
 .member{background:var(--bg3);border:1px solid var(--rule);display:grid;grid-template-columns:280px 1fr}
 .member-photo{background:linear-gradient(150deg,var(--bg2),#ccc4a8);position:relative;min-height:360px}
 .member-photo::after{content:'de(s)';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Cormorant Garamond',serif;font-size:34px;letter-spacing:-0.01em;color:var(--mut);opacity:0.35}
+.member-photo.has-photo{background-image:url('edi.webp');background-size:cover;background-position:center 24%;background-repeat:no-repeat}
+.member-photo.has-photo::after{content:none}
 .member-body{padding:40px}
 .member-role{font-size:11px;text-transform:uppercase;letter-spacing:0.14em;color:var(--sage);font-weight:600;margin-bottom:8px}
 .member-body h2{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;color:var(--ink);margin-bottom:14px}
@@ -88,7 +90,7 @@ gtag("config", "G-QEXH2SYB3G");
   <div class="wrap">
     <div class="team-solo">
       <div class="member rev">
-        <div class="member-photo"></div>
+        <div class="member-photo has-photo"></div>
         <div class="member-body">
           <div class="member-role">Fondator · Psihoterapeut</div>
           <h2>Edi Vlaston</h2>
