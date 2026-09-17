@@ -16,6 +16,7 @@ gtag("config", "G-QEXH2SYB3G");
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script src="nav.js" defer></script>
 <style>
 .ty-wrap{min-height:calc(100vh - 72px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px}
 .ty-mark{width:76px;height:76px;border:1.5px solid var(--sage);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:32px;color:var(--sage);font-size:34px}
@@ -32,6 +33,14 @@ gtag("config", "G-QEXH2SYB3G");
     <a href="index.html" class="logo" style="font-size:42px;letter-spacing:-0.02em">de<span class="p">(</span><span class="s">s</span><span class="p">)</span>prinderi</a>
     <div class="nav-links">
       <a href="programe.html">Programe</a>
+      <div class="has-dropdown">
+        <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Ce tratăm <span class="caret"></span></button>
+        <div class="dropdown-menu">
+          <a href="tratament-dependenta-alcool.html">Alcool</a>
+          <a href="tratament-dependenta-jocuri-de-noroc.html">Jocuri de noroc și pariuri</a>
+          <a href="terapie-dependenta-pornografie.html">Pornografie</a>
+        </div>
+      </div>
       <a href="grup-suport.html">Grup de suport</a>
       <a href="echipa.html">Echipă</a>
       <a href="blog.html">Articole</a>
@@ -64,5 +73,8 @@ gtag("config", "G-QEXH2SYB3G");
 </footer>
 <script>
 function toggleMenu(btn){const links=document.querySelector('.nav-links');const open=links.style.display==='flex';links.style.cssText=open?'':'display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:rgba(245,235,220,0.98);padding:20px 40px;gap:18px;border-bottom:1px solid var(--rule);z-index:99;backdrop-filter:blur(14px)'}
+/* Conversie GA4: cerere trimisă cu succes */
+(function(){var s=new URLSearchParams(location.search).get('sursa');if(s){gtag('event','generate_lead',{sursa:s});}
+document.querySelectorAll('a[href^="tel:"]').forEach(a=>a.addEventListener('click',()=>gtag('event','click_telefon',{sursa:s||'multumim'})));})();
 </script>
 </body></html>

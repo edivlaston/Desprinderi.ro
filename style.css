@@ -43,6 +43,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:transparent;backd
 .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
 .burger span{width:22px;height:1.5px;background:var(--ink);display:block;transition:all .3s}
 
+/* ── DROPDOWN „Ce tratăm" ── */
+.nav-links .has-dropdown{position:relative;display:flex;align-items:center}
+.dropdown-toggle{display:inline-flex;align-items:center;gap:6px;font-family:'Inter';font-size:13px;color:var(--mut);background:none;border:none;cursor:pointer;padding:0;white-space:nowrap;transition:color .2s}
+.dropdown-toggle:hover,.dropdown-toggle[aria-expanded="true"],.has-dropdown.active .dropdown-toggle{color:var(--ink)}
+.dropdown-toggle .caret{display:inline-block;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-1px);transition:transform .2s}
+.dropdown-toggle[aria-expanded="true"] .caret{transform:rotate(-135deg) translateY(1px)}
+.dropdown-menu{position:absolute;top:calc(100% + 8px);left:0;min-width:238px;background:rgba(242,237,227,0.98);backdrop-filter:blur(14px);border:1px solid var(--rule);box-shadow:0 16px 40px rgba(44,36,24,0.1);padding:8px;display:none;flex-direction:column;gap:2px;z-index:120}
+.dropdown-menu::before{content:'';position:absolute;top:-8px;left:0;right:0;height:8px}
+.dropdown-menu.open{display:flex}
+@media(hover:hover) and (min-width:1025px){.has-dropdown:hover .dropdown-menu{display:flex}}
+.dropdown-menu a{font-size:13px;color:var(--mut);text-decoration:none;padding:11px 14px;white-space:nowrap;transition:background .2s,color .2s;border-left:2px solid transparent}
+.dropdown-menu a:hover,.dropdown-menu a.active{background:var(--sage-lt);color:var(--sage2);border-left-color:var(--sage)}
+
 /* ── BUTTONS ── */
 .btn{display:inline-block;padding:14px 30px;font-size:13px;font-weight:500;letter-spacing:0.04em;text-decoration:none;transition:all .2s;cursor:pointer;border:none;font-family:'Inter'}
 .btn-sage{background:var(--sage);color:var(--bg3)}.btn-sage:hover{background:var(--sage2)}
@@ -107,7 +120,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:transparent;backd
 
 /* ── FOOTER ── */
 footer{background:rgba(72,56,36,0.95);padding:64px 0 32px}
-.foot-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.foot-grid{display:flex;flex-wrap:wrap;gap:40px;margin-bottom:48px}
+.foot-brand{flex:2 1 250px}
+.foot-col{flex:1 1 150px}
 .foot-logo{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--bg3);text-decoration:none;display:inline-block;margin-bottom:14px}
 .foot-logo .s{color:var(--sage3)}.foot-logo .p{color:rgba(250,247,242,0.3);font-size:22px}
 .foot-brand p{font-size:14px;color:rgba(250,247,242,0.35);line-height:1.7;max-width:28ch;font-family:'Cormorant Garamond',serif;font-style:italic}
@@ -132,6 +147,14 @@ footer{background:rgba(72,56,36,0.95);padding:64px 0 32px}
   .nav-in{padding:0 20px}
   html,body{max-width:100%;overflow-x:hidden}
   img{max-width:100%;height:auto}
+  /* Dropdown → acordeon centrat în meniul hamburger */
+  .nav-links .has-dropdown{flex-direction:column;align-items:center;width:100%}
+  .dropdown-toggle{width:100%;justify-content:center;gap:8px;font-size:13px;padding:0}
+  .dropdown-menu{position:static;transform:none;top:auto;left:auto;min-width:0;width:100%;border:none;box-shadow:none;background:transparent;backdrop-filter:none;padding:6px 0 2px;align-items:center;gap:0}
+  .dropdown-menu::before{display:none}
+  .dropdown-menu.open{display:flex}
+  .dropdown-menu a{padding:8px 0;text-align:center;white-space:normal;border-left:none;font-size:13px;color:var(--mut)}
+  .dropdown-menu a:hover,.dropdown-menu a.active{background:transparent;color:var(--sage2)}
 }
 @media(max-width:640px){
   .wrap{padding:0 20px}.section{padding:64px 0}.section-sm{padding:48px 0}
